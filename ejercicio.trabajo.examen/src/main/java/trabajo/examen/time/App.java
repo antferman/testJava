@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 public class App {
@@ -19,6 +21,17 @@ public class App {
 		ejercicio2Time(fecha2);
 		ejercicio3Time(fecha3);
 		ejercicio4Time(fecha4);
+		ejercicio5Extra(fecha4);
+		
+	}
+
+	private static void ejercicio5Extra(LocalDateTime fecha4) {
+		// Zonahoraria
+		
+		ZoneId madrid = ZoneId.of("Europe/Madrid");
+		ZonedDateTime zdt = ZonedDateTime.of(fecha4, madrid);
+		System.out.println("Madrid: " + zdt);
+		
 		
 	}
 
